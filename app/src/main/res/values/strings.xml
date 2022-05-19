@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">kezdesy</string>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="city">
+        <item>Nur-Sultan</item>
+        <item>Almaty</item>
+        <item>Shymkent</item>
+        <item>Aktobe</item>
+        <item>Karaganda</item>
+        <item>Atyrau</item>
+        <item>Taraz</item>
+        <item>Pavlodar</item>
+        <item>Semei</item>
+        <item>Ust-Kamenogorsk</item>
+        <item>Kyzylorda</item>
+        <item>Uralsk</item>
+        <item>Kostanay</item>
+        <item>Taldykorgan</item>
+        <item>Kokshetau</item>
+
+    </string-array>
+
+
+    <string name="ads">ca-app-pub-2856452625525397~6376116136</string>
+    <string name="banner">ca-app-pub-2856452625525397/9189981739</string>
+</resources>

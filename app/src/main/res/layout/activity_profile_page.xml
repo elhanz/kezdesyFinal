@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".ProfilePageActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="38dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="4dp"
+        android:background="?android:selectableItemBackground"
+        android:onClick="mainPage"
+        android:src="@drawable/ic_goback"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="309dp"
+        android:layout_height="69dp"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="369dp"
+        android:layout_height="426dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_view_top_radius"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail"
+        app:layout_constraintVertical_bias="0.022">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/modifiedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="32dp"
+            android:hint="First name"
+            app:boxStrokeColor="@color/light_blue"
+            app:endIconMode="clear_text"
+            app:hintTextColor="@color/light_blue"
+            app:placeholderText="First Name"
+            app:startIconDrawable="@drawable/ic_person">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tVFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/modifiedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:hint="Last Name"
+            app:boxStrokeColor="@color/light_blue"
+            app:endIconMode="clear_text"
+            app:hintTextColor="@color/light_blue"
+            app:startIconDrawable="@drawable/ic_person">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tvLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/modifiedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:hint="Age"
+            app:boxStrokeColor="@color/light_blue"
+            app:endIconMode="clear_text"
+            app:hintTextColor="@color/light_blue"
+            app:startIconDrawable="@drawable/ic_age">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tvAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/modifiedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:hint="Gender"
+            app:boxStrokeColor="@color/light_blue"
+            app:endIconMode="clear_text"
+            app:hintTextColor="@color/light_blue"
+            app:startIconDrawable="@drawable/ic_gender">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tvGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/modifiedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:hint="City"
+            app:boxStrokeColor="@color/light_blue"
+            app:endIconMode="clear_text"
+            app:hintTextColor="@color/light_blue"
+            app:startIconDrawable="@drawable/ic_city">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tvCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/UpdateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="80dp"
+            android:backgroundTint="@color/colorAccent"
+            android:fontFamily="@font/montserrat_semibold"
+            android:paddingVertical="10dp"
+            android:text="Update"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/LogoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:backgroundTint="#FA1616"
+        android:fontFamily="@font/montserrat_semibold"
+        android:paddingVertical="10dp"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/DeleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:backgroundTint="#F44848"
+        android:fontFamily="@font/montserrat_semibold"
+        android:paddingVertical="10dp"
+        android:text="Delete User"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.686" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

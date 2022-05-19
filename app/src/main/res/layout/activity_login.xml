@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/login_bk_color"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    tools:context=".LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    style="@style/viewParent.headerText.NoMode"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Please Login,\n our friend!" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginRight="0dp"
+                    android:src="@drawable/ic_register_hero" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEmail"
+                style="@style/modifiedEditText"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputPassword"
+                style="@style/modifiedEditText"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+
+            <TextView
+                style="@style/viewParent"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:text="Forgot Password?"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/newsMoreTextSize" />x
+
+            <Button
+                android:id="@+id/LoginButton"
+                style="@style/parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/parent"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:onClick="onLoginClick"
+                android:text="New user? Register Now"
+                android:textAlignment="center"
+                android:textColor="@color/themeColor"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:weightSum="12">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="3"
+                    android:background="@color/colorPrimaryDark" />
+
+
+                <View
+                    android:layout_width="358dp"
+                    android:layout_height="3dp"
+                    android:layout_weight="3"
+                    android:background="@color/colorPrimaryDark" />
+
+
+            </LinearLayout>
+
+            <com.google.android.gms.ads.admanager.AdManagerAdView
+                android:id="@+id/adManagerAdVew"
+                android:layout_width="346dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="-1dp"
+                app:adSize="BANNER"
+                app:adUnitId="/6499/example/banner"></com.google.android.gms.ads.admanager.AdManagerAdView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="-4dp"
+        android:layout_marginBottom="27dp"
+        android:onClick="onLoginClick"
+        android:src="@drawable/ic_add_img" />
+</RelativeLayout>
