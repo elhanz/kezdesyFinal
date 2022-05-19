@@ -1,9 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/register_bk_color"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
     tools:context=".CreateRoomActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="38dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="4dp"
+        android:background="?android:selectableItemBackground"
+        android:onClick="profilePage"
+        android:src="@drawable/ic_goback"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="52dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/viewParent.headerText.NoMode"
+                    android:layout_width="359dp"
+                    android:layout_height="47dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="68dp"
+                    android:text="Create your room "
+                    android:textColor="@color/whiteTextColor" />
+
+            </RelativeLayout>
+
+            <!--            val city: String,-->
+            <!--            val header: String,-->
+            <!--            val description: String,-->
+            <!--            val minAge: Int,-->
+            <!--            val maxAge: Int,-->
+            <!--            val maxMembers: String,-->
+            <!--            val interests : Set<Interests>-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/whiteTextColor"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtEmail"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/txtCity"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:hint="City"
+                        android:maxLines="1" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtHeader"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:hint="Header"
+                        android:maxLines="1" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtDescription"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:hint="Description"
+                        android:maxLines="1"></com.google.android.material.textfield.TextInputEditText>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtMinAge"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:hint="Min Age"
+                        android:inputType="number"
+                        android:maxLines="1" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtMaxAge"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:hint="Max Age"
+                        android:inputType="number"
+                        android:maxLines="1" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtMaxMembers"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:hint="Max Members"
+                        android:inputType="number"
+                        android:maxLines="1" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtInterests"
+                        style="@style/modifiedEditText"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:hint="Interests"
+                        android:maxLines="1" />
+
+
+                    <Button
+                        android:id="@+id/CreateRoomButton"
+                        style="@style/parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:backgroundTint="@color/colorAccent"
+                        android:text="Create"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

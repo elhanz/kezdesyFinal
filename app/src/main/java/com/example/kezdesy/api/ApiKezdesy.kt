@@ -17,9 +17,6 @@ interface ApiKezdesy {
     @POST("register")
     fun createUser(@Body user: RegisterModel): Call<ResponseBody>
 
-    @POST("registerGoogle")
-    fun createUserAsGoogle(@Body user: CreateUserAsGoogle): Call<ResponseBody>
-
     @POST("login")
     fun login(@Query("email") email: String, @Query("password") password: String): Call<JsonObject>
 
@@ -33,10 +30,10 @@ interface ApiKezdesy {
 
 
     @POST("room/create")
-    fun createRoom(@Header("Authorization") token: String, @Body room: Room): Call<ResponseBody>
+    fun createRoom(@Header("Authorization") token: RoomCreateModel, @Body room: Room): Call<ResponseBody>
 
-    @GET("room/getAllRooms")
-    fun findRooms(@Body user: CreateUserAsGoogle): Call<ResponseBody>
+//    @GET("room/getAllRooms")
+//    fun findRooms(@Body user: CreateUserAsGoogle): Call<ResponseBody>
 
 
 }
