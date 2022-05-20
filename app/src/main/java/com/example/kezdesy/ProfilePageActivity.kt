@@ -196,5 +196,10 @@ class ProfilePageActivity : AppCompatActivity() {
         finish()
     }
 
+    fun CreateRoom(view: View) {
+        val intent = Intent(this, CreateRoomActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
 
 }

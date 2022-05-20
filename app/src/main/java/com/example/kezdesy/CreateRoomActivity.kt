@@ -1,14 +1,18 @@
 package com.example.kezdesy
 
+import android.content.ContentValues
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.kezdesy.api.ApiConfig
 import com.example.kezdesy.model.RoomCreateModel
+import com.google.android.gms.common.api.ApiException
 import kotlinx.android.synthetic.main.activity_create_room.*
-import kotlinx.android.synthetic.main.activity_register.*
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
@@ -21,7 +25,7 @@ class CreateRoomActivity : AppCompatActivity() {
 
 
 
-        RegisterButton.setOnClickListener {
+        CreateRoomButton.setOnClickListener {
 
 
             val room = RoomCreateModel(
@@ -31,24 +35,34 @@ class CreateRoomActivity : AppCompatActivity() {
                 txtDescription.text.toString(),
                 txtMinAge.text.toString().toInt(),
                 txtMaxAge.text.toString().toInt(),
-                txtMaxMembers.text.toString().toInt(),
-                txtInterests.text.toString() //TODO
+                txtMaxMembers.text.toString().toInt()
+
             )
             addRoom(room) {
-                if (it?.source() != null) {
-                    val intent = Intent(this, LoginActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    Toast.makeText(this, "ERROR", Toast.LENGTH_LONG).show()
+
+                try {
+                    if (it?.source() != null) {
+                        val intent = Intent(this, LoginActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        Toast.makeText(this, "ERROR", Toast.LENGTH_LONG).show()
+                    }
+                } catch (e: Exception) {
+                    // The ApiException status code indicates the detailed failure reason.
+                    // Please refer to the GoogleSignInStatusCodes class reference for more information.
+                    Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
                 }
+
             }
         }
     }
 
     fun addRoom(roomData: RoomCreateModel, onResult: (ResponseBody?) -> Unit) {
         val apiUser = ApiConfig.API_USER
-        apiUser.createRoom(roomData).enqueue(
+        val sharedPreferences: SharedPreferences =
+            getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        apiUser.createRoom(sharedPreferences.getString("TOKEN_KEY", null)!!, roomData).enqueue(
             object : Callback<ResponseBody> {
                 override fun onResponse(
                     call: Call<ResponseBody>,

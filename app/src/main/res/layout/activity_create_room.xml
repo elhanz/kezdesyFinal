@@ -125,14 +125,6 @@
                         android:inputType="number"
                         android:maxLines="1" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtInterests"
-                        style="@style/modifiedEditText"
-                        android:layout_marginTop="@dimen/loginViewsMargin"
-                        android:hint="Interests"
-                        android:maxLines="1" />
-
-
                     <Button
                         android:id="@+id/CreateRoomButton"
                         style="@style/parent"

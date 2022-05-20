@@ -5,8 +5,8 @@ data class Room(
     val city: String,
     val header: String,
     val description: String,
-    val minAge: Int,
-    val maxAge: Int,
+    val minAgeLimit: Int,
+    val maxAgeLimit: Int,
     val maxMembers: String,
     val interests : Set<Interests>
 )

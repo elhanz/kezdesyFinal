@@ -30,7 +30,7 @@ interface ApiKezdesy {
 
 
     @POST("room/create")
-    fun createRoom(@Header("Authorization") token: RoomCreateModel, @Body room: Room): Call<ResponseBody>
+    fun createRoom(@Header("Authorization") token:String, @Body room:  RoomCreateModel): Call<ResponseBody>
 
 //    @GET("room/getAllRooms")
 //    fun findRooms(@Body user: CreateUserAsGoogle): Call<ResponseBody>
