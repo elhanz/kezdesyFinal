@@ -10,7 +10,7 @@
         android:id="@+id/profileFrag"
         android:icon="@drawable/ic_male"
         android:title="Profile" />
-    />
+
     <item
         android:id="@+id/createRoomFrag"
         android:icon="@drawable/ic_room"
