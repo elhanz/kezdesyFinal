@@ -45,7 +45,7 @@ class ProfilePageActivity : AppCompatActivity() {
             logOut()
         }
         DeleteButton.setOnClickListener {
-            val email = tvEmail.text.toString().trim()
+            val email = tvEmail.text.toString()
             val deleteModel = DeleteModel(email)
 
             deleteUser(deleteModel)
@@ -165,10 +165,11 @@ class ProfilePageActivity : AppCompatActivity() {
                             putString("GENDER", null)
                         }.apply()
 
+
                     } else {
                         Toast.makeText(
                             this@ProfilePageActivity,
-                            "Delete failed",
+                            response.errorBody().toString(),
                             Toast.LENGTH_LONG
                         ).show()
                     }
@@ -184,9 +185,7 @@ class ProfilePageActivity : AppCompatActivity() {
                 }
             }
         )
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-        finish()
+
     }
 
 
