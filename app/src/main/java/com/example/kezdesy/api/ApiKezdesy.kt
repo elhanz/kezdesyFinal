@@ -6,7 +6,6 @@ import okhttp3.ResponseBody
 
 import retrofit2.Call
 import retrofit2.http.*
-import com.google.android.gms.common.internal.safeparcel.SafeParcelable
 
 interface ApiKezdesy {
 
@@ -32,8 +31,8 @@ interface ApiKezdesy {
     @POST("room/create")
     fun createRoom(@Header("Authorization") token:String, @Body room:  RoomCreateModel): Call<ResponseBody>
 
-//    @GET("room/getAllRooms")
-//    fun findRooms(@Body user: CreateUserAsGoogle): Call<ResponseBody>
+    @GET("room/find")
+    fun getRooms(): Call<List<Room>>
 
 
 }
