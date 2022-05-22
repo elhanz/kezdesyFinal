@@ -36,7 +36,6 @@ class ProfilePageActivity : AppCompatActivity() {
             val gender = tvGender.text.toString()
             val city = tvCity.text.toString()
 
-
             val user = UpdateUserModel(email, first_name, last_name, age, gender, city)
             updateUser(user)
         }
@@ -103,7 +102,6 @@ class ProfilePageActivity : AppCompatActivity() {
     private fun loadData() {
         val sharedPreferences: SharedPreferences =
             getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-
 
         tvEmail.text = sharedPreferences.getString("EMAIL", null)
         tVFirstName.setText(sharedPreferences.getString("FIRST_NAME", null))

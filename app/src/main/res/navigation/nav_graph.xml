@@ -20,4 +20,9 @@
         android:name="com.example.kezdesy.CreateRoomFragment"
         android:label="fragment_create_room"
         tools:layout="@layout/fragment_create_room" />
+    <fragment
+        android:id="@+id/roomsFragment"
+        android:name="com.example.kezdesy.RoomsFragment"
+        android:label="fragment_rooms"
+        tools:layout="@layout/fragment_rooms" />
 </navigation>
