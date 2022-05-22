@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         apiUser.getRooms().enqueue(
             object : Callback<List<Room>> {
 
-
                 override fun onResponse(call: Call<List<Room>>, response: Response<List<Room>>) {
                     if (response.isSuccessful) {
                         Toast.makeText(

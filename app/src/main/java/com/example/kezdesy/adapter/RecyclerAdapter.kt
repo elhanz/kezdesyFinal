@@ -25,12 +25,12 @@ class RecyclerAdapter(val context: Context) : RecyclerView.Adapter<RecyclerAdapt
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
+
         holder.header.text = myList.get(position).header
-        holder.description.text = myList.get(position).description
-        holder.minAge.text = myList.get(position).minAgeLimit.toString()
-        holder.maxAge.text = myList.get(position).maxAgeLimit.toString()
-        holder.maxMembers.text = myList.get(position).maxMembers.toString()
-        holder.city.text = myList.get(position).city
+        holder.description.text = "Description:  " + myList.get(position).description
+        holder.minAge.text = "Age range: " + myList.get(position).minAgeLimit.toString() + "-" + myList.get(position).maxAgeLimit.toString()
+        holder.maxMembers.text = "Max members: " + myList.get(position).maxMembers.toString()
+        holder.city.text = "City: " + myList.get(position).city
 
     }
 
@@ -42,8 +42,7 @@ class RecyclerAdapter(val context: Context) : RecyclerView.Adapter<RecyclerAdapt
     class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val header: TextView = itemView!!.findViewById(R.id.header_txt)
         val description: TextView = itemView!!.findViewById(R.id.description_txt)
-        val minAge: TextView = itemView!!.findViewById(R.id.minAge_txt)
-        val maxAge: TextView = itemView!!.findViewById(R.id.maxAge_txt)
+        val minAge: TextView = itemView!!.findViewById(R.id.age_txt)
         val maxMembers: TextView = itemView!!.findViewById(R.id.maxMembers_txt)
         val city: TextView = itemView!!.findViewById(R.id.city_txt)
 
